@@ -114,6 +114,12 @@ namespace EcoDietMaker {
                 var spAfter = GetSPValue(stomach);
                 Console.WriteLine($"  - {food.Name} for {food.Calories} ( {spBefore:0.000}SP/d -> {spAfter:0.000}SP/d || {spAfter-spBefore:0.000} delta )");
             }
+
+            if(Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                Console.WriteLine("Press Any Key to Exit...");
+                Console.ReadKey(false);
+            }
         }
     }
 
